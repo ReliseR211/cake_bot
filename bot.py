@@ -85,9 +85,9 @@ async def total_order(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("остатки", update_inventory))
-    app.add_handler(CommandHandler("показать", show_inventory))
-    app.add_handler(CommandHandler("заказ", total_order))
+    app.add_handler(CommandHandler("stock", update_inventory))
+    app.add_handler(CommandHandler("show", show_inventory))
+    app.add_handler(CommandHandler("order", total_order))
     app.run_polling()
 
 if __name__ == '__main__':
